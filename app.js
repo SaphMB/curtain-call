@@ -4,6 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
+
+// Connection URL
+// var url = 'mongodb://localhost:27017/fourth-wall';
+// // Use connect method to connect to the Server
+// MongoClient.connect(url, function(err, db) {
+//   assert.equal(null, err);
+//   console.log("Connected correctly to server");
+//
+//   db.close();
+// });
 
 var index = require('./routes/index');
 var users = require('./routes/users');
